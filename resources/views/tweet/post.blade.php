@@ -25,7 +25,7 @@
             </div>
         </div>
             @foreach($posts as $tweets)
-                <div class="tweet_view">    
+                <div class="col-md-8 mx-auto tweet_view">    
                     <span class="c1">{{ $tweets->user->name }}</span>
                     <span class="c2">{{ $tweets->created_at }}</span><br>
                     <span class="c3">{{ $tweets->body }}</span>

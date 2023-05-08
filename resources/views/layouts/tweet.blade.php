@@ -8,11 +8,9 @@
 
 
    <!-- CSRF Token -->
-   {{-- 後の章で説明します --}}
    <meta name="csrf-token" content="{{ csrf_token() }}">
 
 
-   {{-- 各ページごとにtitleタグを入れるために@yieldで空けておきます。 --}}
    <title>@yield('title')</title>
 
 
@@ -22,17 +20,16 @@
 
 
    <!-- Scripts -->
-   {{-- Laravel標準で用意されているJavascript/scssを読み込みます --}}
    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 
 
 </head>
 <body>
    <div id="app">
-       {{-- 画面上部に表示するナビゲーションバーです。 --}}
+       {{-- ナビゲーションバー --}}
        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
            <div class="container">
-               <a class="navbar-brand" href="{{ url('/admin/news') }}">
+               <a class="navbar-brand" href="{{ url('/tweet/post') }}">
                    {{ config('app.name', 'Laravel') }}
                </a>
                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
